@@ -1,0 +1,53 @@
+<?php
+$Title="申请直播间";
+require_once("teamplate/head.php");
+if(!isset($_SESSION['user']))
+{
+	$msg="请先登录";
+	require_once("teamplate/msg.php");
+	die();
+}
+//以下操作，针对已经登录用户
+$user=$_SESSION['user'];
+//1、查看是否已经申请直播间
+require_once("lib/db_info.php");
+require_once("lib/db_function.php");
+if(find_liveroom($user))
+{
+	$Live->user=$user;
+	//输出直播信息
+	$msg="
+	直播间已经开通<br/><br/>
+	推流地址：rtmp://{$_SERVER['HTTP_HOST']}/hls/<br/><br/>
+	推流码：$Live->str<br/><br/>
+	访问密码：$Live->pass<br/>";
+	require_once("teamplate/msg.php");
+	die();
+}
+//没有申请过，则生成一个
+//插入数据到直播间
+//var_dump($_POST);
+if(isset($_POST['name']))
+{
+	//var_dump($_POST);
+	$name=$_POST['name'];
+	$pass=$_POST['pass'];
+	$str=$_POST['str'];
+	if(INSERT_liveroom($name,$user,$pass,$str))
+	{
+		$msg="
+		直播间开通成功！<br/>
+		推流地址：http://{$_SERVER['HTTP_HOST']}/live/<br/>
+		推流码：$str<br/>
+		观看密码：$pass<br/>";
+		require_once("teamplate/msg.php");
+		die();
+	}
+	else
+		echo "<h3>申请失败！</h3>";
+}
+require_once("teamplate/live_form.html");
+?>
+<?php
+require_once("teamplate/bottom.php");
+?>
