@@ -9,3 +9,8 @@
 
 3、nginx-rtmp搭建的直播技术
 
+4、存在sql注入漏洞，局域网使用无大问题。
+
+## 原理文章：
+
+[https://mp.weixin.qq.com/s/UIx6gKvXIVPTxrlvNbi9Kw](https://mp.weixin.qq.com/s/UIx6gKvXIVPTxrlvNbi9Kw)
