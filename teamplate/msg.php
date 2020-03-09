@@ -1,11 +1,12 @@
 <?php
-require_once("teamplate/head.php");
+require_once( "teamplate/head.php" );
 ?>
-<div class="alert alert-warning" role="alert">
-<h3>
-<?php if(isset($msg)) echo $msg;?>
-</h3>
-</div>
+<blockquote>
+  <p> 课程中心提示</p>
+</blockquote>
+<p class="lead">
+  <?php if(isset($msg)) echo $msg;?>
+</p>
 <?php
-require_once("bottom.php");
+require_once( "bottom.php" );
 ?>

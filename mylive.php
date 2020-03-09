@@ -16,7 +16,9 @@ $user=$_SESSION['user'];
 $sql="SELECT * FROM `liveroom` WHERE `user`='{$user}'";
 $res = mysqli_query( $conn, $sql );
 $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
-echo "<h3>{$row['name']}</h3>";
+echo "<blockquote>
+  <p> {$row['name']}</p>
+</blockquote>";
 ?>
 <script type="text/javascript" src="bootstrap/clappr.js"></script>
 <div id="player"></div>

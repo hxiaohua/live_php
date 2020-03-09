@@ -1,12 +1,10 @@
 <?php
 $Title="直播首页";
 require_once("teamplate/head.php");
-//var_dump($_SESSION);
-//展示数据库中存在的所有直播间，并提供访问页面
 ?>
-<p class="lead">
-将展示所有直播信息
-</p>
+<blockquote>
+  <p> 系统所有直播课程</p>
+</blockquote>
 <form class="form-inline">
   <div class="form-group">
     <label for="">搜索</label>
@@ -28,7 +26,7 @@ echo '<th width="30">直播房间</th>';
 echo '<th width="30">主播用户</th>';
 echo '<th width="30">访问权限</th>';
 echo '</tr></thead>';
-while($row = mysqli_fetch_array($res, MYSQLI_ASSOC))
+while($row = mysqli_fetch_assoc($res))
 {
 	//var_dump($row);
 	echo "<tr>

@@ -17,9 +17,9 @@ if(find_liveroom($user))
 	$Live->user=$user;
 	//输出直播信息
 	$msg="
-	直播间已经开通<br/><br/>
-	推流地址：rtmp://{$_SERVER['HTTP_HOST']}/hls/<br/><br/>
-	推流码：$Live->str<br/><br/>
+	您的直播间信息：<br/><br/>
+	推流地址：rtmp://{$_SERVER['HTTP_HOST']}/hls/<br/>
+	推流码：$Live->str<br/>
 	访问密码：$Live->pass<br/>";
 	require_once("teamplate/msg.php");
 	die();

@@ -2,7 +2,6 @@
 ini_set( "display_errors", "On" );
 //全局变量数据库
 global $mysqli;
-
 #连接数据库
 $db_host="localhost";
 $db_pass="";//修改为实际的数据库密码

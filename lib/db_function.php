@@ -3,7 +3,6 @@ function check_login($username,$password){
 		$mysqli=$GLOBALS['mysqli'];
 		$password=md5($password);
 		$sql="select * from user where `username`='{$username}' and `password`='{$password}';";
-		//echo $sql;
 		$obj = mysqli_query( $mysqli, $sql );
 		$num = mysqli_affected_rows($mysqli);
 		if ( $num >= 1 ) {

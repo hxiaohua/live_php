@@ -1,8 +1,8 @@
-## PHP+MySql直播源代码
+## PHP+MySql直播平台系统源代码
 
-首先在Linux系统，搭建好直播平台。
+技术栈实现：PHP+MySql
 
-实现直播平台，前端后台，直播申请、直播页查看
+先在Linux，部署好直播平台
 
 ## 简单说明
 
@@ -17,3 +17,7 @@
 ## 原理文章：
 
 [https://mp.weixin.qq.com/s/UIx6gKvXIVPTxrlvNbi9Kw](https://mp.weixin.qq.com/s/UIx6gKvXIVPTxrlvNbi9Kw)
+
+### 如有疑问：
+
+请联系微信：cutehxh
